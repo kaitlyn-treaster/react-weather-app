@@ -105,6 +105,10 @@ hr {
     border-radius: 10px; 
 }
 
+#precipiation {
+    padding-left: 230px;
+}
+
 #wind {
     padding-left: 230px;
 }
