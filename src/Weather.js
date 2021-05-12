@@ -3,20 +3,22 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-    const [ready, setReady] = useState(false);
-    const [weatherData, setWeatherData] = useState({});
+    
+    const [weatherData, setWeatherData] = useState({ ready: false });
     function handleResponse(response) {
         console.log(response.data);
         setWeatherData({
+            ready: true,
             temperature: response.data.main.temp,
-            wind: 12,
+            humidity: response.data.main.humidity,
+            description: response.data.weather[0].description,
+            iconUrl: "",
+            wind: response.data.wind.speed,
             city: response.data.name
         });
-
-        setReady(true);
     }
 
-    if (ready) {
+    if (weatherData.ready) {
         return (
         <div className="Weather">
         <div class="weather-container">
@@ -51,7 +53,7 @@ export default function Weather() {
                     <div class="col-4">
                         <div class="float-left">
                             <img 
-                            src="" alt="Clear" id="icon" class="float-left" />
+                            src={weatherData.iconUrl} alt={weatherData.description} id="icon" class="float-left" />
                         </div>
                         <div class="average" id="average"></div>
                     </div>
@@ -99,7 +101,7 @@ export default function Weather() {
                         <i class="fas fa-tint"></i> Humidity
                     </li>
                     <li>
-                        <span id="humidity"></span>%
+                        <span id="humidity">{weatherData.humidity}</span>%
                     </li>
                    </ul>
                </div>
