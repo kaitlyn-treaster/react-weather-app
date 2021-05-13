@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
@@ -11,6 +12,7 @@ export default function Weather(props) {
             ready: true,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
+            date: new Date(response.data.dt * 1000),
             description: response.data.weather[0].description,
             iconUrl: "",
             wind: response.data.wind.speed,
@@ -44,7 +46,7 @@ export default function Weather(props) {
                                 <span id="city">{weatherData.city}</span>
                             </div>
                             <div class="as-of">
-                                As of <span id="date"></span> 
+                                As of <span id="date"><FormattedDate date={weatherData.date} /></span> 
                             </div>
                             <div class="temperature" id="temperature">{Math.round(weatherData.temperature)}</div> 
                             <div class="weather" id="description">{weatherData.description}</div>
