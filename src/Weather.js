@@ -74,19 +74,6 @@ export default function Weather(props) {
                <div class="col-sm">
                    <ul class="bottom-box">
                        <li>
-                        <i class="fas fa-cloud-rain"></i> Precipitation
-                       </li>
-                        <li>
-                         <span id="precipiation"></span> %
-                       </li>
-                   </ul>
-               </div>
-           </div>
-           <hr />
-           <div class="row">
-               <div class="col-sm">
-                   <ul class="bottom-box">
-                       <li>
                         <i class="fas fa-wind"></i> Wind
                        </li>
                         <li>
