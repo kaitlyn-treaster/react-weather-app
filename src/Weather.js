@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherTemperature from "./WeatherTemperature";
 import axios from "axios";
 import "./Weather.css";
 
@@ -45,9 +46,7 @@ export default function Weather(props) {
             <form class="search-form" id="search-form">
                 <input type="text" placeholder="🔍  Enter city..." autofocus="on" id="search-bar" onChange={handleCityChange} />
                 <input type="submit" value="Search" id="submit-button" />
-                <span class="units"
-                ><a href="/" id="celsius-link" class="active">°C |</a> 
-                <a href="/" id="fahrenheit-link">°F</a></span>
+                
             </form>
         </div>
         
