@@ -90,7 +90,12 @@ hr {
 #description {
     color: white;
     padding-left: 25px;
-}    
+} 
+
+.float-left {
+    padding-top: 20px;
+    display: inline-block;
+}
 
 .average {
     color: white;

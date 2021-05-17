@@ -8,7 +8,7 @@ export default function App() {
     <div className="container">
     <Weather defaultCity="New York" />
     <footer>
-      Project is created by Kaitlyn Treaster and is {" "}
+      This project was coded by Kaitlyn Treaster and is {" "}
       <a
       href="https://github.com/kaitlyn-treaster/react-weather-app"
       target="_blank"
