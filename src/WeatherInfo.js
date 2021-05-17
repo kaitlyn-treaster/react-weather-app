@@ -46,7 +46,7 @@ export default function WeatherInfo(props) {
                         <i class="fas fa-wind"></i> Wind
                        </li>
                         <li>
-                         <span id="wind">{props.data.wind}</span> mph
+                         <span id="wind">{Math.round(props.data.wind)}</span> mph
                        </li>
                    </ul>
                </div>
