@@ -123,11 +123,15 @@ hr {
 }
 
 .weekly-forecast {
+    text-align: center;
     background: white;
     border: 2px solid white;
     border-radius: 10px; 
 }
-
+.bottom-section {
+    text-align: left;
+    margin-left: 20px;
+}
 .weather-forecast {
     margin-top: 20px;
     color: #000;

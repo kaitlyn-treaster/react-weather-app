@@ -25,8 +25,8 @@ export default function WeatherInfo(props) {
                             </div>
                         </div>
                         <div className="col-4">
-                            <div className="float-left" id="icon" id="icon">
-                            <WeatherIcon code={props.data.icon} />
+                            <div className="float-left" id="icon">
+                            <WeatherIcon code={props.data.icon} size={52} />
                             </div>
                             <div className="average" id="average"></div>
                         </div>
@@ -72,7 +72,7 @@ export default function WeatherInfo(props) {
 
         <div className="weekly-forecast">
             <br />
-            <h4>
+            <h4 className="bottom-section">
                 Weekly Forecast
             </h4>
             <div className="weather-forecast" id="forecast"><WeatherForecast /></div>
