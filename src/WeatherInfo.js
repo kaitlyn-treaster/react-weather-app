@@ -2,32 +2,33 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
     return (
         <div className="WeatherInfo">
-            <div class="info">
-                <div class="place-container">
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="degree">
+            <div className="info">
+                <div className="place-container">
+                    <div className="row">
+                        <div className="col-8">
+                            <div className="degree">
                                 <div id="current-city">
                                     <span id="city">{props.data.city}</span>
                                 </div>
-                                <div class="as-of">
+                                <div className="as-of">
                                     As of <span id="date">
                                         <FormattedDate date={props.data.date} />
                                         </span> 
                                 </div>
                                 <WeatherTemperature celsius={props.data.temperature} />
-                                <div class="weather" id="description">{props.data.description}</div>
+                                <div className="weather" id="description">{props.data.description}</div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="float-left" id="icon">
+                        <div className="col-4">
+                            <div className="float-left" id="icon">
                                 <WeatherIcon code={props.data.icon} />
                             </div>
-                            <div class="average" id="average"></div>
+                            <div className="average" id="average"></div>
                         </div>
                     </div>
                 </div> 
@@ -36,15 +37,15 @@ export default function WeatherInfo(props) {
             <br />
             <br />
                 
-        <div class="weather-today">
+        <div className="weather-today">
             <br />
            <h4>Weather today</h4>
            <br />
-           <div class="row">
-               <div class="col-sm">
-                   <ul class="bottom-box">
+           <div className="row">
+               <div className="col-sm">
+                   <ul className="bottom-box">
                        <li>
-                        <i class="fas fa-wind"></i> Wind
+                        <i className="fas fa-wind"></i> Wind
                        </li>
                         <li>
                          <span id="wind">{Math.round(props.data.wind)}</span> mph
@@ -53,11 +54,11 @@ export default function WeatherInfo(props) {
                </div>
            </div>
            <hr />
-           <div class="row">
-               <div class="col-sm">
-                   <ul class="bottom-box">
+           <div className="row">
+               <div className="col-sm">
+                   <ul className="bottom-box">
                     <li>
-                        <i class="fas fa-tint"></i> Humidity
+                        <i className="fas fa-tint"></i> Humidity
                     </li>
                     <li>
                         <span id="humidity">{props.data.humidity}</span>%
@@ -69,12 +70,12 @@ export default function WeatherInfo(props) {
         <br />
         <br />
 
-        <div class="weekly-forecast">
+        <div className="weekly-forecast">
             <br />
             <h4>
                 Weekly Forecast
             </h4>
-            <div class="weather-forecast" id="forecast"></div>
+            <div className="weather-forecast" id="forecast"><WeatherForecast /></div>
             <br />
         </div>
         <br />
