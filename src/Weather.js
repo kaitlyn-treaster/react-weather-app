@@ -53,12 +53,13 @@ export default function Weather(props) {
         
         <br />
         <WeatherInfo data={weatherData}/>
+        
         <div className="weekly-forecast">
             <br />
             <h4 className="bottom-section">
                 Weekly Forecast
             </h4>
-            <div className="weather-forecast" id="forecast"><WeatherForecast coordinates={weatherData.coordinates}/></div>
+            <div className="weather-forecast" id="forecast"><WeatherForecast coordinates={weatherData.coordinates} /></div>
             <br />
         </div>
         </div>
