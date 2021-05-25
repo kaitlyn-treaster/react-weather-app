@@ -1,4 +1,12 @@
+.WeatherForecast-temperature-max {
+    color: white;
+}
 .WeatherForecast-temperature-min {
     opacity: 0.6;
     margin-left: 5px;
+    color: white;
+}
+
+.weatherForecast-day {
+    color: white;
 }
