@@ -27,12 +27,13 @@ hr {
 
 .container {
     border-radius: 20px;
-    background: linear-gradient(#a1c4fd, #c2e9fb);
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
 }
 
 #search-bar {
     margin: 10px 10px 10px 250px;
-    background-color: #034052;
+    background-color: #04befe;
     border-radius: 5px;
 }
 
@@ -41,9 +42,9 @@ hr {
 }
 
 #submit-button {
-    background-color: #034052;
+    background-color: #04befe;
     color: white;
-    border: 4px solid #034052;
+    border: 4px solid #04befe;
     border-radius: 15px;
     transition: all 200ms ease;
     box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
@@ -66,7 +67,7 @@ hr {
 
 .place-container {
    margin: 20px 160px 20px 180px;
-   background: #046582;
+   background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
    border: 5px solid white;
    border-radius: 10px;
    font-family: 'Lato', sans-serif; 
@@ -107,7 +108,7 @@ hr {
 
 .weather-today {
     margin: 20px 190px 20px 190px;
-    background-color: #046582;
+    background-color: #4481eb;
     border: 5px solid white;
     border-radius: 10px; 
     color: white;
@@ -129,7 +130,7 @@ hr {
 
 .weekly-forecast {
     text-align: center;
-    background: #046582;
+    background: #4481eb;
     border: 5px solid white;
     border-radius: 10px; 
 }
