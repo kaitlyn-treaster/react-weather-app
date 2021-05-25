@@ -1,7 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
-import WeatherForecast from "./WeatherForecast";
+
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
@@ -70,15 +70,7 @@ export default function WeatherInfo(props) {
         <br />
         <br />
 
-        <div className="weekly-forecast">
-            <br />
-            <h4 className="bottom-section">
-                Weekly Forecast
-            </h4>
-            <div className="weather-forecast" id="forecast"><WeatherForecast /></div>
-            <br />
-        </div>
-        <br />
+        
     </div>
     );
 }
